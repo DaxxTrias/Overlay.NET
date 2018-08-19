@@ -626,6 +626,8 @@ namespace Overlay.NET.Directx {
                 }
 
                 if (bufferPos == -1) {
+                    _fontContainer[font].SetTextAlignment(TextAlignment.Leading);
+                    _fontContainer[font].SetWordWrapping(WordWrapping.NoWrap);
                     _layoutContainer.Add(new TextLayoutBuffer(text,
                         new TextLayout(_fontFactory, text, _fontContainer[font], float.MaxValue, float.MaxValue)));
                     bufferPos = _layoutContainer.Count - 1;

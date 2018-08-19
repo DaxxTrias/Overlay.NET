@@ -22,8 +22,9 @@ namespace Overlay.NET.Directx {
         public TextLayoutBuffer(string text, TextLayout layout) {
             Text = text;
             TextLayout = layout;
-            TextLayout.TextAlignment = TextAlignment.Leading;
-            TextLayout.WordWrapping = WordWrapping.NoWrap;
+            //todo these cant be assigned at this point anymore
+            //TextLayout.TextAlignment = TextAlignment.Leading;
+            //TextLayout.WordWrapping = WordWrapping.NoWrap;
         }
 
         /// <summary>
