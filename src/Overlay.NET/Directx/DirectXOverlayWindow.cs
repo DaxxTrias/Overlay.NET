@@ -164,6 +164,12 @@ namespace Overlay.NET.Directx {
             if (!CreateWindow()) {
                 throw new Exception("Could not create OverlayWindow");
             }
+            //var gwl = Native.GetWindowLongPtr(Handle, -20);
+
+            //Native.SetWindowLongPtr(Handle, -20, (Native.GetWindowLongPtr(Handle, -20 | 0x80000 | 0x20)));
+
+            //Native.SetLayeredWindowAttributes(Handle, 0, 255, 0x2);
+
 
             Graphics = new Direct2DRenderer(Handle, limitFps);
 

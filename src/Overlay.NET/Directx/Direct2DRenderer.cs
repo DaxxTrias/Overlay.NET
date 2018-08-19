@@ -262,7 +262,7 @@ namespace Overlay.NET.Directx {
         ///     Clears the frame
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void ClearScene() => _device.Clear(Transparent);
+        public void ClearScene() => _device.Clear(null); //todo: Should this be set to transparent instead of null?
 
         /// <summary>
         ///     Draws the line.
