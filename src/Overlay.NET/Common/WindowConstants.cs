@@ -32,6 +32,11 @@ namespace Overlay.NET.Common {
                                             | 0x80 //WS_EX_TOOLWINDOW -> Not in taskbar
                                             | 0x8 //WS_EX_TOPMOST
                                             | 0x20; //WS_EX_TRANSPARENT
+        /// <summary>
+        ///     The blue style dx
+        /// </summary>
+        public const uint BlurFlags = 0x00000001; //DWM_BB_ENABLE
+
 
         /// <summary>
         ///     The HWND notopmost
