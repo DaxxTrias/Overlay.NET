@@ -105,6 +105,7 @@ namespace Overlay.NET.Directx {
         /// <param name="hwnd">The HWND.</param>
         /// <param name="limitFps">if set to <c>true</c> [limit FPS].</param>
         public Direct2DRenderer(IntPtr hwnd, bool limitFps) {
+
             _factory = new SharpDX.Direct2D1.Factory();
 
             _fontFactory = new Factory();
@@ -122,10 +123,12 @@ namespace Overlay.NET.Directx {
                 new PixelFormat(Format.B8G8R8A8_UNorm, AlphaMode.Premultiplied), 0, 0, RenderTargetUsage.None,
                 FeatureLevel.Level_DEFAULT);
 
-            _device = new WindowRenderTarget(_factory, prop, targetProperties) {
-                TextAntialiasMode = TextAntialiasMode.Aliased,
-                AntialiasMode = AntialiasMode.Aliased
-            };
+            _device = new WindowRenderTarget(_factory, prop, targetProperties);
+
+            //_device = new WindowRenderTarget(_factory, prop, targetProperties) {
+            //    TextAntialiasMode = TextAntialiasMode.Aliased,
+            //    AntialiasMode = AntialiasMode.Aliased
+            //};
         }
 
         /// <summary>
